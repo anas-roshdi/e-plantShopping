@@ -2,6 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice'; // Import action creators
 import './CartItem.css';
+import { updateQuantity } from './CartSlice'; // Import updateQuantity action creator
+
+
 
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items); // Access cart items from state
@@ -25,18 +28,18 @@ const CartItem = ({ onContinueShopping }) => {
   const handleIncrement = (item) => {
     dispatch(updateQuantity({ plantName: item.name, newQuantity: item.quantity + 1 }));
   };
-
+  
   const handleDecrement = (item) => {
     if (item.quantity > 1) {
       dispatch(updateQuantity({ plantName: item.name, newQuantity: item.quantity - 1 }));
-    } else {
-      dispatch(removeItem({ plantName: item.name })); // Remove if quantity reaches 0
     }
   };
+  
 
   const handleRemove = (item) => {
     dispatch(removeItem({ plantName: item.name }));
   };
+  
 
   const calculateTotalCost = (item) => {
     return (item.quantity * item.cost).toFixed(2); // Format to two decimal places

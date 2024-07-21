@@ -3,11 +3,15 @@ import './ProductList.css'
 import CartItem from './CartItem';
 import { useDispatch } from 'react-redux'; // Import for dispatching actions
 import { addItem } from './CartSlice'; // Import addItem action from CartSlice
+
 function ProductList() {
+    const cart = useSelector(state => state.cart.items); // Access cart items
     const [showCart, setShowCart] = useState(false); 
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState({}); // Track added products
     const dispatch = useDispatch(); // Get dispatch function from Redux
+const plant = { name: 'Plant Name', image: 'plant_image.jpg', cost: 19.99 };
+dispatch(addItem({ plant })); // Dispatch addItem action with plant details
 
     const handleAddToCart = (plant) => {
     dispatch(addItem(plant)); // Dispatch addItem action to CartSlice
