@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
+import { useDispatch } from 'react-redux';
 import CartItem from './CartItem';
 import { addItem } from "./CartSlice";
 function ProductList({ onHomeClick }) {
@@ -233,6 +234,7 @@ function ProductList({ onHomeClick }) {
         fontSize: '30px',
         textDecoration: 'none',
     }
+    const dispatch = useDispatch();
     const handleAddToCart = (product) => {
      dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
 
