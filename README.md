@@ -1,5 +1,3 @@
-# e-plantShopping
-
 # 🌿 e-plantShopping
 
 A modern, responsive e-commerce web application for purchasing plants. This project demonstrates advanced **React** concepts, state management, and seamless user experience.
