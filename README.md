@@ -3,8 +3,7 @@
 A modern, responsive e-commerce web application for purchasing plants. This project demonstrates advanced **React** concepts, state management, and seamless user experience.
 
 ## 🔗 Live Demo
-**[Click here to view the live website](رابط_موقعك_هنا)** 👈 *(أضف رابط Vercel أو GitHub Pages هنا)*
-
+**[Click here to view the live website](https://anas-roshdi.github.io/e-plantShopping/)**
 ## ✨ Features
 - **🛒 Dynamic Product Catalog**: Browse a variety of plants with real-time availability.
 - **🛍️ Smart Shopping Cart**: Add, remove, and adjust item quantities with instant updates.
